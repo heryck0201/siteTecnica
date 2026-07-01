@@ -38,3 +38,26 @@ document.addEventListener("click", (event) => {
 window.addEventListener("resize", () => {
   if (window.innerWidth >= 768) closeMenu();
 });
+
+const form = document.getElementById("contactForm");
+
+form.addEventListener("submit", async function (e) {
+    e.preventDefault();
+
+    const formData = new FormData(form);
+
+    const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: formData
+    });
+
+    const data = await response.json();
+
+    if (data.success) {
+        alert("Mensagem enviada com sucesso!");
+        form.reset();
+    } else {
+        alert("Erro ao enviar a mensagem.");
+        console.log(data);
+    }
+});

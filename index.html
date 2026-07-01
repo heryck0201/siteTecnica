@@ -108,13 +108,18 @@
           <p class="kicker">Fale conosco</p>
           <h2>Solicite uma proposta</h2>
 
-          <form class="contact-form">
+          <form class="contact-form" id="contactForm">
+            <input type="hidden" name="access_key" value="SUA_ACCESS_KEY">
+            <input type="hidden" name="subject" value="Novo contato pelo site">
+            <input type="checkbox" name="botcheck" style="display:none;">
             <label>Nome<input type="text" placeholder="Seu nome" required></label>
             <label>E-mail<input type="email" placeholder="tecnica_tecnologia@hotmail.com" required></label>
             <label>Telefone<input type="tel" placeholder="(00) 00000-0000"></label>
             <label>Assunto<input type="text" placeholder="Como podemos ajudar?"></label>
             <label class="full">Mensagem<textarea rows="5" placeholder="Conte um pouco sobre sua necessidade" required></textarea></label>
             <button class="btn btn-primary full" type="submit">Enviar Mensagem</button>
+
+            <p id="formMessage" class="form-message"></p>
           </form>
         </div>
 
