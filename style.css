@@ -181,6 +181,25 @@ input:focus, textarea:focus { border-color: var(--blue); box-shadow: 0 0 0 4px r
     border: 1px solid #f5c6cb;
 }
 
+.copyright{
+    text-align:center;
+    line-height:1.8;
+    padding:25px 15px;
+}
+
+.copyright p{
+    margin:6px 0;
+}
+
+.copyright a{
+    color:#fff;
+    text-decoration:underline;
+}
+
+.copyright a:hover{
+    opacity:.8;
+}
+
 @media (min-width: 640px) {
   .service-grid { grid-template-columns: repeat(2, 1fr); }
   .contact-form { grid-template-columns: repeat(2, 1fr); }
